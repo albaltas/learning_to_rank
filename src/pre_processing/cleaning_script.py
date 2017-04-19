@@ -3,18 +3,13 @@
 Created on Sun Feb 26 01:49:46 2017
 
 @author: Simon Stiebellehner
+https://github.com/stiebels
 
 This script converts the MSLR files to .csv and cleans the data so that it can be used in conventional Python ML libraries.
 """
 
-###############################################################
-# Package Imports
-
 import pandas as pd
 
-
-###############################################################
-# Data Cleaning Functions
 
 # Dropping column with 100% nan values (parsing problem probably)
 def drop_col(df):
