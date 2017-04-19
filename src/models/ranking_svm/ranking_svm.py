@@ -7,7 +7,7 @@ Created on Sun Apr  2 17:27:24 2017
 
 This file implements a Support Vector Machine for Ranking tasks.
 This is realized by transforming the data into pairwise representation (turning the multi-class problem
-into a binary classification) and subsequently training a SVM with a linear kernel on this transformed data.
+into a binary classification) and subsequently training a SVM with a linear kernel on the transformed data.
 Coefficients of the trained model are then used to predict the ordering of unseen data.
 
 """
