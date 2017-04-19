@@ -3,6 +3,6 @@ This repository contains the source code of UCL's COMPGI15: Information Retrieva
 
 ### Group 6
 * Simon Stiebellehner: https://github.com/stiebels
-* Dimitri Visnadi
+* [Dimitri Visnadi](https://www.linkedin.com/in/visnadi)
 * Andreas Gompos
 * Alexandros Baltas
