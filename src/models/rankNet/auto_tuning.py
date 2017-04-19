@@ -2,6 +2,7 @@
 """
 Created on Wed Mar  8 10:50:44 2017
 @author: Simon Stiebellehner
+https://github.com/stiebels
 
 This script does automatized random search for parameter tuning for Lemur RankLib.
 """
