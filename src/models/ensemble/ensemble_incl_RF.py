@@ -3,6 +3,7 @@
 Created on Sun Feb 26 19:56:37 2017
 
 @author: Simon Stiebellehner
+https://github.com/stiebels
 
 This file implements three classifiers:
  - XGBoost (Gradient Boosted Trees)
