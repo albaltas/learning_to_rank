@@ -6,6 +6,8 @@ from sklearn.metrics import mean_squared_error
 def make_sample(df, num_q=50): # 1 query (qid) ~ 120 rows
     '''
     @ Simon Stiebellehner
+    https://github.com/stiebels
+    
     draws sample of complete queries
     '''
     # sampling to make coding/trying out things lighter
@@ -17,6 +19,8 @@ def make_sample(df, num_q=50): # 1 query (qid) ~ 120 rows
 def sep_feat_labels(df):
     '''
     @ Simon Stiebellehner
+    https://github.com/stiebels
+    
     separates features from labels
     '''
     # returns (features, labels)
@@ -26,6 +30,7 @@ def sep_feat_labels(df):
 def get_ndcg(x_dev_qid, preds, y_dev, k=10, linear=False):
     '''
     @ Simon Stiebellehner
+    https://github.com/stiebels
     
     Arguments:
         - x_dev_qid: array of qid of dev set
@@ -52,6 +57,8 @@ def get_ndcg(x_dev_qid, preds, y_dev, k=10, linear=False):
 def rmse_func(y_pred, y_truth):
     '''
     @ Simon Stiebellehner
+    https://github.com/stiebels
+    
     Computes RMSE score
     
         Arguments:
@@ -67,6 +74,7 @@ def rmse_func(y_pred, y_truth):
 def dcg(y_truth, y_pred, k=10, linear=False, epsilon=0.00001):
     """
     @ Simon Stiebellehner    
+    https://github.com/stiebels
     
     Arguments:
         - y_truth: ground truth
@@ -94,7 +102,8 @@ def dcg(y_truth, y_pred, k=10, linear=False, epsilon=0.00001):
 def ndcg(y_truth, y_pred, k=10, linear=False, epsilon=0.00001):
     '''
     @ Simon Stiebellehner
-
+    https://github.com/stiebels
+    
     Arguments:
         - y_truth: ground truth
         - y_pred: predictions
