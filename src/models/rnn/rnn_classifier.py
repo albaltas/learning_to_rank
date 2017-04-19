@@ -3,6 +3,7 @@
 Created on Sun Feb 26 19:56:37 2017
 
 @author: Simon Stiebellehner
+https://github.com/stiebels
 
 This file implements a Multi-layered (stacked), bidirectional Recurrent Neural Network for classification,
 followed by two feed-forward ReLu layers and a softmax function for multiclass-classification.
