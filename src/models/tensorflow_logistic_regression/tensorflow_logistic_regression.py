@@ -6,6 +6,8 @@
 
 '''
 #%%
+import sys
+sys.path.append(“../../“)
 import tensorflow as tf
 from sklearn.preprocessing import OneHotEncoder, StandardScaler
 from sklearn.model_selection import train_test_split
@@ -18,7 +20,7 @@ one_hot_enc = OneHotEncoder(5)
 standard_scaler = StandardScaler()
 
 
-df = pd.read_csv("../../prediction_data/train_set_large_cleaned.csv", index_col=0)
+df = pd.read_csv("dummy_path", index_col=0)
 
 features = df.ix[:, df.columns != 'rel']
 set_X = features.ix[:, features.columns != 'qid'].as_matrix()
@@ -81,8 +83,7 @@ saver = tf.train.Saver()
 with tf.Session() as sess:
     sess.run(init)
 
-    for epoch in range(number_of_training_epochs):       
-#    for epoch in range(1):       
+    for epoch in range(number_of_training_epochs):         
         opt = sess.run(optimizer, feed_dict={x: train_X,y: train_Y})
         train_pred = predictions.eval({x: train_X, y: train_Y})
         dev_pred = predictions.eval({x: dev_X, y: dev_Y})
@@ -93,16 +94,9 @@ with tf.Session() as sess:
 
         print("---")
     
-#    save_path = saver.save(sess, "../tf_logreg.ckpt")
-#    print("Model saved in file: %s" % save_path)
     test_pred = predictions.eval({x: test_set_X, y: test_oh_Y})
     
     
     predictions = pd.DataFrame({"qid" : np.array([x[0] for x in qids]), "label": np.array([x[0] for x in test_set_Y.tolist()]), "pred": test_pred})
     predictions.to_csv('logreg_preds_large.csv')
     
-#    print(precision_recall_f1(test_set_Y, test_pred))
-#
-#    print(get_ndcg(np.array([x[0] for x in qids]), test_pred, np.array([x[0] for x in test_set_Y.tolist()]), k=10))
-#    print(get_ndcg(np.array([x[0] for x in qids]), test_pred, np.array([x[0] for x in test_set_Y.tolist()]), k=5))
-#    print(get_mapk(np.array([x[0] for x in qids]), test_pred, np.array([x[0] for x in test_set_Y.tolist()])))
