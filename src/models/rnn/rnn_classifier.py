@@ -14,7 +14,6 @@ Optimization of hyperparameters was performed employing Bayesian optimization us
 #%%
 # Package Imports
 import sys
-sys.path.append('/home/sist/Desktop/irdm_project/repo/code/') # If module util is not found, append path to it like this before loading
 from util import make_sample, sep_feat_labels
 import numpy as np
 import random
@@ -42,7 +41,7 @@ np.random.seed(seed)
 
 # SPECIFY 
 
-directory = '/home/sist/Desktop/irdm_project/data/'
+directory = '/specify/path/here/'
 fold = 1 # 1 | 2 | 3 | 4 | 5
 dataset = 'train' # 'train' | 'vali' | 'test'
 
@@ -182,7 +181,7 @@ tune = False
 
 epochs = 30
 batch_size = 47
-callbacks = [ModelCheckpoint('/home/sist/Desktop/irdm_project/weights.hdf5', monitor='val_loss', save_best_only=True, verbose=1)] # picking model with least val_loss performs better than model with best val_fmeasure; i think fmeasure is computed a bit differently in keras than in sklearn
+callbacks = [ModelCheckpoint('/specify/path/to_model/here/', monitor='val_loss', save_best_only=True, verbose=1)] # picking model with least val_loss performs better than model with best val_fmeasure; i think fmeasure is computed a bit differently in keras than in sklearn
 nn = KerasClassifier(build_fn=rnn_bi_clf_network, nb_epoch=epochs, batch_size=batch_size, verbose=1) # create NN object
 if tune == True:
     param_list = []
@@ -231,7 +230,7 @@ if tune == True:
 
 else:
     clf = nn.fit(np.array(x_train_dev), np.array(y_train_dev), batch_size=batch_size, nb_epoch=epochs, shuffle=True, verbose=1, validation_data = (np.array(x_dev), np.array(y_dev)), callbacks=callbacks) # fit model to data; includes callbacks to show score on validation set; saves best performing model over epochs
-    best_model = load_model('/home/sist/Desktop/irdm_project/weights.hdf5') # loads best performing model previously saved
+    best_model = load_model('/specify/path/to_best_model/here/') # loads best performing model previously saved
     preds = best_model.predict(np.array(x_dev)) # uses best performing model to make prediction
 
 
