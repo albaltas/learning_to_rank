@@ -20,6 +20,7 @@ These three base classifiers are then ensembled in two ways:
 # Package Imports
 
 import sys
+sys.path.append(“../../“)
 import util
 import random
 import numpy as np
