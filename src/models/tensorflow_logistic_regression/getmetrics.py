@@ -4,7 +4,8 @@ Created on Mon Mar 27 20:35:51 2017
 
 @author: Alexandros Baltas
 """
-
+import sys
+sys.path.append(“../../“)
 from util import precision_recall_f1, get_ndcg, get_mapk
 import pandas as pd
 
