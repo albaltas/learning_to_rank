@@ -14,7 +14,7 @@ import subprocess
 # -*- coding: utf-8 -*-
 """
 Created on Wed Mar  8 10:50:44 2017
-@author: sist
+@author: dvisnadi
 """
 
 # %%
