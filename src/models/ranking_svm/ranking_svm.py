@@ -14,6 +14,7 @@ Coefficients of the trained model are then used to predict the ordering of unsee
 #%%
 
 import sys
+sys.path.append(“../../“)
 import util
 import random
 import numpy as np
