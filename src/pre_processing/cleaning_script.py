@@ -33,7 +33,7 @@ def split_semicolon(df, do_applymap=False):
 # Specify folds you want to clean (default: all)
 # Specify datasets you want to clean (detault: all)
 
-directory = '/home/sist/Desktop/irdm_project/data/'
+directory = '/specify/path/here'
 folds = [1,2,3,4,5]
 datasets = ['train', 'vali', 'test']
 
