@@ -14,8 +14,6 @@ Coefficients of the trained model are then used to predict the ordering of unsee
 #%%
 
 import sys
-sys.path.append('/home/sist/Desktop/irdm_project/repo/code/') # If module util is not found, append path to it like this before loading
-
 import util
 import random
 import numpy as np
@@ -35,7 +33,7 @@ np.random.seed(seed)
 
 #%% Loading data
 
-directory = '/home/sist/Desktop/irdm_project/data/'
+directory = '/specify/path/here'
 fold = 1 # 1 | 2 | 3 | 4 | 5
 dataset = 'train' # 'train' | 'vali' | 'test'
 
