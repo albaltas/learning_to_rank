@@ -20,8 +20,6 @@ These three base classifiers are then ensembled in two ways:
 # Package Imports
 
 import sys
-sys.path.append('/home/sist/Desktop/irdm_project/repo/code/') # If module util is not found, append path to it like this before loading
-
 import util
 import random
 import numpy as np
@@ -49,7 +47,7 @@ def get_meta_sets():
     '''
     Use a meta-set (additional holdout set) for training the meta-classifier in the stacked ensemble.
     '''
-    df_ens_eval = pd.read_csv('/home/sist/Desktop/irdm_project/data/fold1_cleaned.csv')
+    df_ens_eval = pd.read_csv('/specify/path/here/fold1_cleaned.csv')
     df_ens_sel = df_ens_eval.drop('Unnamed: 0', axis=1)
     df_sample = util.make_sample(df_ens_sel, num_q=500) # randomly sampling from the data
     X_ens, Y_ens = util.sep_feat_labels(df_sample)
@@ -88,7 +86,7 @@ def constrained_sum_sample_pos(n, total):
 
 # SPECIFY
 
-directory = '/home/sist/Desktop/irdm_project/data/Fold1/xbb'
+directory = '/specify/path/here'
 fold = 1 # 1 | 2 | 3 | 4 | 5
 dataset = 'train' # 'train' | 'vali' | 'test'
 
