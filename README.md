@@ -36,6 +36,8 @@ Custom implementaion of an Ensemble Model.
 Tuning script of RankLib's LamdaMART.
 * rankNet:
 Tuning script of RankLib's RankNet.
+* rankBoost:
+Tuning script of RankLib's RankBoost.
 * ranking_svm:	
 Custom implementation of a Ranking SVM.
 * rnn:
