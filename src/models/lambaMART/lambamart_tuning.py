@@ -20,8 +20,8 @@ mls = np.arange(0, 5, 1)
 
 #%%
 
-call_lib = 'java -jar ../../RankLib.jar '
-params_fix = '-train ../../prediction_data_ori/train_set_small.txt -ranker 6 -tvs 0.8 '
+call_lib = 'java -jar path/to/RankLib.jar '
+params_fix = '-train path/to/train_set.txt -ranker 6 -tvs 0.8 '
 param_metric1 = '-metric2t NDCG@10 '
 param_metric2 = '-metric2T ERR@10 '
 
