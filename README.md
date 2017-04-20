@@ -28,6 +28,8 @@ This repository contains various custom models for the ranking task. They can be
 
 * adaboost:
 Custom implementation of AdaBoost.
+* adarank:
+Tuning script of RankLib's AdaRank.
 * ensemble:
 Custom implementaion of an Ensemble Model.
 * lambaMART:
