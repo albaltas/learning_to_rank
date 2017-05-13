@@ -1,0 +1,10 @@
+When referencing this work, please use the following BibTex:
+
+@misc{l2rucl,
+  author = {Baltas, A. and Gompos, A. and Stiebellehner, S. and Visnadi, D.},
+  title = {Learning to Rank},
+  year = {2017},
+  publisher = {GitHub},
+  journal = {GitHub repository},
+  howpublished = {\url{https://github.com/albaltas/learning_to_rank}},
+}
